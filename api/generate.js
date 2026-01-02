@@ -5,7 +5,7 @@ export default async function handler(req) {
     const { prompt } = await req.json();
 
     const response = await fetch(
-      "https://api-inference.huggingface.co/v1/chat/completions",
+      "https://router.huggingface.co/hf-inference/v1/chat/completions",
       {
         method: "POST",
         headers: {
