@@ -5,7 +5,7 @@ export default async function handler(req) {
 
   // We use the 'v1/chat/completions' style which is standard for Qwen
   const response = await fetch(
-    "https://api-inference.huggingface.co/models/Qwen/Qwen2.5-72B-Instruct/v1/chat/completions",
+    "https://router.huggingface.co/models/Qwen/Qwen2.5-72B-Instruct/v1/chat/completions",
     {
       method: "POST",
       headers: {
