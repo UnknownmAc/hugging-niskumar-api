@@ -5,7 +5,7 @@ export default async function handler(req) {
     const { prompt } = await req.json();
 
     const response = await fetch(
-      "https://router.huggingface.co/hf-inference/v1/chat/completions",
+      "https://router.huggingface.co/nebius/v1/chat/completions",
       {
         method: "POST",
         headers: {
@@ -13,7 +13,7 @@ export default async function handler(req) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: "Qwen/Qwen2.5-72B-Instruct",
+          model: "meta-llama/Llama-3.3-70B-Instruct",
           messages: [{ role: "user", content: prompt }],
           max_tokens: 500
         }),
