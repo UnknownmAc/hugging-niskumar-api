@@ -5,7 +5,7 @@ export default async function handler(req) {
     const { prompt } = await req.json();
 
     const response = await fetch(
-      "https://router.huggingface.co/hf-inference/models/Qwen/Qwen2.5-72B-Instruct/v1/chat/completions",
+      "https://api-inference.huggingface.co/v1/chat/completions",
       {
         method: "POST",
         headers: {
